@@ -24,9 +24,18 @@ describe('unexpected-resemble', function () {
             'when rejected',
             'to have message',
             function (message) {
-                expect(message.replace(/(analysisTime: )\d+/, '$1???'), 'to equal',
+                expect(
+                    message
+                        .replace(/^(actual|expected): .*\//gm, '$1: /path/to/')
+                        .replace(/^diff: .*\.png/m, 'diff: /tmp/diff.png')
+                        .replace(/(analysisTime: )\d+/, '$1???'),
+                    'to equal',
                     "expected '/home/andreas/work/unexpected-resemble/testdata/People.jpg'\n" +
                     "to be an image resembling '/home/andreas/work/unexpected-resemble/testdata/People2.jpg', 4\n" +
+                    "\n" +
+                    "actual: /path/to/People.jpg\n" +
+                    "expected: /path/to/People2.jpg\n" +
+                    "diff: /tmp/diff.png\n" +
                     "\n" +
                     "{\n" +
                     "  isSameDimensions: true,\n" +
