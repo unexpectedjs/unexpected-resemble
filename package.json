@@ -1,0 +1,45 @@
+{
+  "name": "unexpected-resemble",
+  "version": "1.0.0",
+  "description": "Resemble.js plugin for the Unexpected assertion library",
+  "main": "lib/unexpectedResemble.js",
+  "dependencies": {
+    "image-type": "2.0.2",
+    "gettemporaryfilepath": "0.0.1",
+    "resemble": "1.2.1",
+    "underscore": "1.8.3"
+  },
+  "devDependencies": {
+    "coveralls": "2.11.2",
+    "istanbul": "0.3.13",
+    "jshint": "2.6.3",
+    "mocha": "2.2.1",
+    "unexpected": "7.0.0",
+    "unexpected-promise": "1.1.0"
+  },
+  "scripts": {
+    "lint": "jshint .",
+    "test": "mocha && npm run lint",
+    "travis": "npm test && npm run coverage && <coverage/lcov.info coveralls",
+    "coverage": "NODE_ENV=development istanbul cover _mocha -- --reporter dot && echo google-chrome coverage/lcov-report/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unexpectedjs/unexpected-resemble.git"
+  },
+  "keywords": [
+    "test",
+    "assertion",
+    "unexpected",
+    "image",
+    "resemblance",
+    "comparison",
+    "diff"
+  ],
+  "author": "Andreas Lind <andreas@one.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/unexpectedjs/unexpected-resemble/issues"
+  },
+  "homepage": "https://github.com/unexpectedjs/unexpected-resemble"
+}
