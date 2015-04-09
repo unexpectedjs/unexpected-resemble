@@ -5,11 +5,7 @@ var unexpected = require('unexpected'),
 describe('unexpected-resemble', function () {
     var expect = unexpected.clone()
         .installPlugin(require('../lib/unexpectedResemble'))
-        .installPlugin(require('unexpected-promise'))
-        .addAssertion('Error', 'to have message', function (expect, subject, value) {
-            this.errorMode = 'nested';
-            return expect(subject._isUnexpected ? subject.output.toString() : subject.message, 'to satisfy', value);
-        });
+        .installPlugin(require('unexpected-promise'));
 
     var peopleJpgPath = pathModule.resolve(__dirname, '..', 'testdata', 'People.jpg'),
         people2JpgPath = pathModule.resolve(__dirname, '..', 'testdata', 'People2.jpg');
