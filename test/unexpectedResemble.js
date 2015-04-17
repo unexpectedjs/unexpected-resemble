@@ -1,4 +1,4 @@
-/*global describe, it*/
+/*global describe, it, __dirname*/
 var unexpected = require('unexpected'),
     pathModule = require('path');
 
