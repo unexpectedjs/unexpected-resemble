@@ -11,12 +11,12 @@ describe('unexpected-resemble', function () {
         people2JpgPath = pathModule.resolve(__dirname, '..', 'testdata', 'People2.jpg');
 
     it('should succeed when the comparison is successful', function () {
-        return expect(peopleJpgPath, 'to be an image resembling', people2JpgPath, 10);
+        return expect(peopleJpgPath, 'to resemble', people2JpgPath, 10);
     });
 
     it('should fail when the comparison is unsuccessful', function () {
         return expect(
-            expect(peopleJpgPath, 'to be an image resembling', people2JpgPath, 4),
+            expect(peopleJpgPath, 'to resemble', people2JpgPath, 4),
             'when rejected',
             'to have message',
             function (message) {
@@ -24,10 +24,10 @@ describe('unexpected-resemble', function () {
                     message
                         .replace(/^(actual|expected): .*\//gm, '$1: /path/to/')
                         .replace(/^diff: .*\.png/m, 'diff: /tmp/diff.png')
-                        .replace(/(analysisTime: )\d+/, '$1???'),
+                        .replace(/(analysisTime: )\d+/, '$1?'),
                     'to equal',
                     "expected '/home/andreas/work/unexpected-resemble/testdata/People.jpg'\n" +
-                    "to be an image resembling '/home/andreas/work/unexpected-resemble/testdata/People2.jpg', 4\n" +
+                    "to resemble '/home/andreas/work/unexpected-resemble/testdata/People2.jpg', 4\n" +
                     "\n" +
                     "actual: /path/to/People.jpg\n" +
                     "expected: /path/to/People2.jpg\n" +
@@ -37,7 +37,7 @@ describe('unexpected-resemble', function () {
                     "  isSameDimensions: true,\n" +
                     "  dimensionDifference: { width: 0, height: 0 },\n" +
                     "  misMatchPercentage: '8.66', // expected '8.66' to be less than 4\n" +
-                    "  analysisTime: ???\n" +
+                    "  analysisTime: ?\n" +
                     "}"
                 );
             }
