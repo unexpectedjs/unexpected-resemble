@@ -3,10 +3,10 @@ unexpected-resemble
 
 [Resemble.js](http://huddle.github.io/Resemble.js/) plugin for the [Unexpected](https://unexpectedjs.github.io/) assertion library (version 7+ required).
 
-[![NPM version](https://badge.fury.io/js/unexpected-resemble.png)](http://badge.fury.io/js/unexpected-resemble)
-[![Build Status](https://travis-ci.org/unexpectedjs/unexpected-resemble.png?branch=master)](https://travis-ci.org/unexpectedjs/unexpected-resemble)
-[![Coverage Status](https://coveralls.io/repos/unexpectedjs/unexpected-resemble/badge.png)](https://coveralls.io/r/unexpectedjs/unexpected-resemble)
-[![Dependency Status](https://david-dm.org/unexpectedjs/unexpected-resemble.png)](https://david-dm.org/unexpectedjs/unexpected-resemble)
+[![NPM version](https://badge.fury.io/js/unexpected-resemble.svg)](http://badge.fury.io/js/unexpected-resemble)
+[![Build Status](https://travis-ci.org/unexpectedjs/unexpected-resemble.svg?branch=master)](https://travis-ci.org/unexpectedjs/unexpected-resemble)
+[![Coverage Status](https://coveralls.io/repos/unexpectedjs/unexpected-resemble/badge.svg)](https://coveralls.io/r/unexpectedjs/unexpected-resemble)
+[![Dependency Status](https://david-dm.org/unexpectedjs/unexpected-resemble.svg)](https://david-dm.org/unexpectedjs/unexpected-resemble)
 
 Images can be specified either as strings (file name) or as Buffer instances.
 
