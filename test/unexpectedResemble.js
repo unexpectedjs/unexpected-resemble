@@ -26,8 +26,8 @@ describe('unexpected-resemble', function () {
                         .replace(/^diff: .*\.png/m, 'diff: /tmp/diff.png')
                         .replace(/(analysisTime: )\d+/, '$1?'),
                     'to equal',
-                    "expected '/home/andreas/work/unexpected-resemble/testdata/People.jpg'\n" +
-                    "to resemble '/home/andreas/work/unexpected-resemble/testdata/People2.jpg', 4\n" +
+                    "expected '" + peopleJpgPath + "'\n" +
+                    "to resemble '" + people2JpgPath + "', 4\n" +
                     "\n" +
                     "actual: /path/to/People.jpg\n" +
                     "expected: /path/to/People2.jpg\n" +
