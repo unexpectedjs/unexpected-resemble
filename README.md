@@ -14,7 +14,7 @@ To compare using the default options (images must have the same dimensions and b
 
 ```js
 it('should resemble some other image', function () {
-    return expect('foo.jpg', 'to be an image resembling', 'bar.jpg');
+    return expect('foo.jpg', 'to resemble', 'bar.jpg');
 });
 ```
 
@@ -24,7 +24,7 @@ satisfy](https://unexpectedjs.github.io/assertions/any/to-satisfy/) semantics:
 
 ```js
 it('should resemble some other image', function () {
-    return expect('foo.jpg', 'to be an image resembling', 'bar.jpg', {
+    return expect('foo.jpg', 'to resemble', 'bar.jpg', {
         misMatchPercentage: expect.it('to be less than', 10),
         isSameDimensions: false
     });
