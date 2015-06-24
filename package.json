@@ -17,8 +17,7 @@
     "istanbul": "0.3.13",
     "jshint": "2.6.3",
     "mocha": "2.2.1",
-    "unexpected": "8.0.0",
-    "unexpected-promise": "1.2.0"
+    "unexpected": "8.5.0"
   },
   "scripts": {
     "lint": "jshint .",

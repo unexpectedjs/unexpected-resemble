@@ -4,8 +4,7 @@ var unexpected = require('unexpected'),
 
 describe('unexpected-resemble', function () {
     var expect = unexpected.clone()
-        .installPlugin(require('../lib/unexpectedResemble'))
-        .installPlugin(require('unexpected-promise'));
+        .installPlugin(require('../lib/unexpectedResemble'));
 
     var peopleJpgPath = pathModule.resolve(__dirname, '..', 'testdata', 'People.jpg'),
         people2JpgPath = pathModule.resolve(__dirname, '..', 'testdata', 'People2.jpg');
@@ -17,11 +16,10 @@ describe('unexpected-resemble', function () {
     it('should fail when the comparison is unsuccessful', function () {
         return expect(
             expect(peopleJpgPath, 'to resemble', people2JpgPath, 4),
-            'when rejected',
-            'to have message',
-            function (message) {
+            'to be rejected with',
+            function (err) {
                 expect(
-                    message
+                    err.getErrorMessage().toString('text')
                         .replace(/^(actual|expected): .*\//gm, '$1: /path/to/')
                         .replace(/^diff: .*\.png/m, 'diff: /tmp/diff.png')
                         .replace(/(analysisTime: )\d+/, '$1?'),
