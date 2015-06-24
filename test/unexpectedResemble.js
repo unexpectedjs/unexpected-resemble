@@ -27,16 +27,16 @@ describe('unexpected-resemble', function () {
                     "expected '" + peopleJpgPath + "'\n" +
                     "to resemble '" + people2JpgPath + "', 4\n" +
                     "\n" +
-                    "actual: /path/to/People.jpg\n" +
-                    "expected: /path/to/People2.jpg\n" +
-                    "diff: /tmp/diff.png\n" +
-                    "\n" +
                     "{\n" +
                     "  isSameDimensions: true,\n" +
                     "  dimensionDifference: { width: 0, height: 0 },\n" +
                     "  misMatchPercentage: '8.66', // expected '8.66' to be less than 4\n" +
                     "  analysisTime: ?\n" +
-                    "}"
+                    "}\n" +
+                    "\n" +
+                    "actual: /path/to/People.jpg\n" +
+                    "expected: /path/to/People2.jpg\n" +
+                    "diff: /tmp/diff.png\n"
                 );
             }
         );
