@@ -1,3 +1,4 @@
 /node_modules/
 /coverage/
 /unexpectedResemble.min.js
+/site-build/
