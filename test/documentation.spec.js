@@ -30,7 +30,17 @@ describe("documentation tests", function () {
             });
         }).caught(function (e) {
             expect(e, "to have message",
-                "hey"
+                "expected 'testdata/People.jpg' to resemble 'testdata/People2.jpg'\n" +
+                "\n" +
+                "{\n" +
+                "  isSameDimensions: true,\n" +
+                "  dimensionDifference: { width: 0, height: 0 },\n" +
+                "  misMatchPercentage: 8.66 // expected 8.66 to be less than 1\n" +
+                "}\n" +
+                "\n" +
+                "actual:   testdata/People.jpg\n" +
+                "expected: testdata/People2.jpg\n" +
+                "diff:     /tmp/image.png"
             );
         }));
 
@@ -51,14 +61,19 @@ describe("documentation tests", function () {
             });
         }).caught(function (e) {
             expect(e, "to have message",
-                "```\n" +
+                "expected 'testdata/People_small.jpg' to resemble 'testdata/People2_small.jpg'\n" +
                 "\n" +
-                "For more fine-grained control, specify an object with comparison options,\n" +
-                "which will matched against the result object from resemble.js with [to\n" +
-                "satisfy](https://unexpectedjs.github.io/assertions/any/to-satisfy/) semantics:\n" +
+                "{\n" +
+                "  isSameDimensions: true,\n" +
+                "  dimensionDifference: { width: 0, height: 0 },\n" +
+                "  misMatchPercentage: 10.08 // expected 10.08 to be less than 1\n" +
+                "}\n" +
                 "\n" +
+                "actual:   testdata/People_small.jpg\n" +
+                "expected: testdata/People2_small.jpg\n" +
+                "diff:     /tmp/image.png\n" +
                 "```javascript#async:true\n" +
-                "return expect('foo.jpg', 'to resemble', 'bar.jpg', {\n" +
+                "return expect('testdata/People_small.jpg', 'to resemble', 'testdata/People2_small.jpg', {\n" +
                 "    misMatchPercentage: expect.it('to be less than', 10),\n" +
                 "    isSameDimensions: false\n" +
                 "});"

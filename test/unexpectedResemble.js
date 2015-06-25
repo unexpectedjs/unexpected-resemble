@@ -21,8 +21,7 @@ describe('unexpected-resemble', function () {
                 expect(
                     err.getErrorMessage().toString('text')
                         .replace(/^(actual|expected): .*\//gm, '$1: /path/to/')
-                        .replace(/^diff: .*\.png/m, 'diff: /tmp/diff.png')
-                        .replace(/(analysisTime: )\d+/, '$1?'),
+                        .replace(/^diff: .*\.png/m, 'diff: /tmp/diff.png'),
                     'to equal',
                     "expected '" + peopleJpgPath + "'\n" +
                     "to resemble '" + people2JpgPath + "', 4\n" +
@@ -30,8 +29,7 @@ describe('unexpected-resemble', function () {
                     "{\n" +
                     "  isSameDimensions: true,\n" +
                     "  dimensionDifference: { width: 0, height: 0 },\n" +
-                    "  misMatchPercentage: '8.66', // expected '8.66' to be less than 4\n" +
-                    "  analysisTime: ?\n" +
+                    "  misMatchPercentage: 8.66 // expected 8.66 to be less than 4\n" +
                     "}\n" +
                     "\n" +
                     "actual: /path/to/People.jpg\n" +
