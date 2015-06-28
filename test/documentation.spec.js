@@ -71,15 +71,17 @@ describe("documentation tests", function () {
                 "\n" +
                 "actual:   testdata/People_small.jpg\n" +
                 "expected: testdata/People2_small.jpg\n" +
-                "diff:     /tmp/image.png\n" +
-                "```javascript#async:true\n" +
-                "return expect('testdata/People_small.jpg', 'to resemble', 'testdata/People2_small.jpg', {\n" +
-                "    misMatchPercentage: expect.it('to be less than', 10),\n" +
-                "    isSameDimensions: false\n" +
-                "});"
+                "diff:     /tmp/image.png"
             );
         }));
 
+
+        testPromises.push(expect.promise(function () {
+            return expect('testdata/People_small.jpg', 'to resemble', 'testdata/People2_small.jpg', {
+                misMatchPercentage: expect.it('to be less than', 15),
+                isSameDimensions: true
+            });
+        }));
         return expect.promise.all(testPromises);
     });
 });

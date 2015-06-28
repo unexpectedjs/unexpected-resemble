@@ -34,7 +34,7 @@ describe('unexpected-resemble', function () {
                     "\n" +
                     "actual: /path/to/People.jpg\n" +
                     "expected: /path/to/People2.jpg\n" +
-                    "diff: /tmp/diff.png\n"
+                    "diff: /tmp/diff.png"
                 );
             }
         );

@@ -35,10 +35,17 @@ expected 'testdata/People_small.jpg' to resemble 'testdata/People2_small.jpg'
 actual:   testdata/People_small.jpg
 expected: testdata/People2_small.jpg
 diff:     /tmp/image.png
+```
+
+For more fine-grained control, specify an object with comparison options,
+which will matched against the result object from resemble.js with [to
+satisfy](https://unexpectedjs.github.io/assertions/any/to-satisfy/) semantics:
+
+
 ```javascript#async:true
 return expect('testdata/People_small.jpg', 'to resemble', 'testdata/People2_small.jpg', {
-    misMatchPercentage: expect.it('to be less than', 10),
-    isSameDimensions: false
+    misMatchPercentage: expect.it('to be less than', 15),
+    isSameDimensions: true
 });
 ```
 
