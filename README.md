@@ -8,30 +8,7 @@ unexpected-resemble
 [![Coverage Status](https://coveralls.io/repos/unexpectedjs/unexpected-resemble/badge.svg)](https://coveralls.io/r/unexpectedjs/unexpected-resemble)
 [![Dependency Status](https://david-dm.org/unexpectedjs/unexpected-resemble.svg)](https://david-dm.org/unexpectedjs/unexpected-resemble)
 
-Images can be specified either as strings (file name) or as Buffer instances.
-
-To compare using the default options (images must have the same dimensions and be less than 1% different):
-
-```js
-it('should resemble some other image', function () {
-    return expect('foo.jpg', 'to resemble', 'bar.jpg');
-});
-```
-
-For more fine-grained control, specify an object with comparison options,
-which will matched against the result object from resemble.js with [to
-satisfy](https://unexpectedjs.github.io/assertions/any/to-satisfy/) semantics:
-
-```js
-it('should resemble some other image', function () {
-    return expect('foo.jpg', 'to resemble', 'bar.jpg', {
-        misMatchPercentage: expect.it('to be less than', 10),
-        isSameDimensions: false
-    });
-});
-```
-
-See an [overview of all the supported comparison options](https://github.com/Huddle/Resemble.js).
+Read [the documentation](https://unexpected.js.org/unexpected-resemble/).
 
 License
 -------
