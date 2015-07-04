@@ -8,6 +8,7 @@
     "image-type": "2.0.2",
     "minimist": "1.1.1",
     "resemble": "1.2.1",
+    "resemblejs": "1.2.1",
     "underscore": "1.8.3",
     "unexpected-documentation-site-generator": "2.4.0"
   },
