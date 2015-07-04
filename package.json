@@ -4,26 +4,40 @@
   "description": "Resemble.js plugin for the Unexpected assertion library",
   "main": "lib/unexpectedResemble.js",
   "dependencies": {
-    "image-type": "2.0.2",
     "gettemporaryfilepath": "0.0.1",
+    "image-type": "2.0.2",
+    "minimist": "1.1.1",
     "resemble": "1.2.1",
-    "underscore": "1.8.3"
+    "resemblejs": "1.2.1",
+    "underscore": "1.8.3",
+    "unexpected-documentation-site-generator": "2.4.0"
   },
   "peerDependencies": {
-    "unexpected": "7 || 8"
+    "unexpected": "7 || 8 || 9"
   },
   "devDependencies": {
+    "browserify": "7.0.0",
+    "bundle-collapser": "1.1.0",
     "coveralls": "2.11.2",
     "istanbul": "0.3.13",
     "jshint": "2.6.3",
     "mocha": "2.2.1",
-    "unexpected": "8.5.0"
+    "proxyquire": "1.5.0",
+    "unexpected": "9.0.0",
+    "unexpected-documentation-site-generator": "2.5.1"
   },
+  "files": [
+    "unexpectedResemble.min.js",
+    "lib"
+  ],
   "scripts": {
     "lint": "jshint .",
     "test": "mocha && npm run lint",
     "travis": "npm test && npm run coverage && <coverage/lcov.info coveralls",
-    "coverage": "NODE_ENV=development istanbul cover _mocha -- --reporter dot && echo google-chrome coverage/lcov-report/index.html"
+    "coverage": "NODE_ENV=development istanbul cover _mocha -- --reporter dot && echo google-chrome coverage/lcov-report/index.html",
+    "prepublish": "browserify -p bundle-collapser/plugin -i canvas -e lib/unexpectedResemble -s unexpectedResemble > unexpectedResemble.min.js",
+    "generate-site": "node ./generate-site.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/",
+    "update-examples": "node ./generate-site.js --update-examples && npm run generate-site"
   },
   "repository": {
     "type": "git",
