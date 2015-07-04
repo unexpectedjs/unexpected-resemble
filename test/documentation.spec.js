@@ -35,7 +35,7 @@ describe("documentation tests", function () {
                 "{\n" +
                 "  isSameDimensions: true,\n" +
                 "  dimensionDifference: { width: 0, height: 0 },\n" +
-                "  misMatchPercentage: 8.66 // expected 8.66 to be less than 1\n" +
+                "  mismatchPercentage: 8.66 // expected 8.66 to be less than 1\n" +
                 "}\n" +
                 "\n" +
                 "actual:   testdata/People.jpg\n" +
@@ -66,7 +66,7 @@ describe("documentation tests", function () {
                 "{\n" +
                 "  isSameDimensions: true,\n" +
                 "  dimensionDifference: { width: 0, height: 0 },\n" +
-                "  misMatchPercentage: 10.08 // expected 10.08 to be less than 1\n" +
+                "  mismatchPercentage: 10.08 // expected 10.08 to be less than 1\n" +
                 "}\n" +
                 "\n" +
                 "actual:   testdata/People_small.jpg\n" +

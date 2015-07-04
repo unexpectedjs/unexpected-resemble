@@ -29,7 +29,7 @@ expected 'testdata/People_small.jpg' to resemble 'testdata/People2_small.jpg'
 {
   isSameDimensions: true,
   dimensionDifference: { width: 0, height: 0 },
-  misMatchPercentage: 10.08 // expected 10.08 to be less than 1
+  mismatchPercentage: 10.08 // expected 10.08 to be less than 1
 }
 
 actual:   testdata/People_small.jpg
