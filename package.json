@@ -13,7 +13,7 @@
     "unexpected-documentation-site-generator": "2.4.0"
   },
   "peerDependencies": {
-    "unexpected": "7 || 8"
+    "unexpected": "7 || 8 || 9"
   },
   "devDependencies": {
     "browserify": "7.0.0",
@@ -23,7 +23,8 @@
     "jshint": "2.6.3",
     "mocha": "2.2.1",
     "proxyquire": "1.5.0",
-    "unexpected": "8.5.0"
+    "unexpected": "9.0.0",
+    "unexpected-documentation-site-generator": "2.5.1"
   },
   "files": [
     "unexpectedResemble.min.js",

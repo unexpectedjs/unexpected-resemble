@@ -19,7 +19,7 @@ describe('unexpected-resemble', function () {
             'to be rejected with',
             function (err) {
                 expect(
-                    err.getErrorMessage().toString('text')
+                    err.getErrorMessage('text').toString()
                         .replace(/^(actual|expected): .*\//gm, '$1: /path/to/')
                         .replace(/^diff: .*\.png/m, 'diff: /tmp/diff.png'),
                     'to equal',
