@@ -38,9 +38,9 @@ describe("documentation tests", function () {
                 "  mismatchPercentage: 8.66 // expected 8.66 to be less than 1\n" +
                 "}\n" +
                 "\n" +
-                "actual:   testdata/People.jpg\n" +
-                "expected: testdata/People2.jpg\n" +
-                "diff:     /tmp/image.png"
+                "actual:   testdata/People.jpg (image/jpeg)\n" +
+                "expected: testdata/People2.jpg (image/jpeg)\n" +
+                "diff:     /tmp/image.png (image/png)"
             );
         }));
 
@@ -69,9 +69,9 @@ describe("documentation tests", function () {
                 "  mismatchPercentage: 10.08 // expected 10.08 to be less than 1\n" +
                 "}\n" +
                 "\n" +
-                "actual:   testdata/People_small.jpg\n" +
-                "expected: testdata/People2_small.jpg\n" +
-                "diff:     /tmp/image.png"
+                "actual:   testdata/People_small.jpg (image/jpeg)\n" +
+                "expected: testdata/People2_small.jpg (image/jpeg)\n" +
+                "diff:     /tmp/image.png (image/png)"
             );
         }));
 

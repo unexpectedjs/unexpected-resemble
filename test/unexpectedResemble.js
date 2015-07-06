@@ -2,6 +2,10 @@
 var unexpected = require('unexpected'),
     pathModule = require('path');
 
+function quoteRegExpMetaChars(str) {
+    return str.replace(/[\.\+\*\{\}\[\]\(\)\?\^\$]/g, '\\$&');
+}
+
 describe('unexpected-resemble', function () {
     var expect = unexpected.clone()
         .installPlugin(require('../lib/unexpectedResemble'));
@@ -20,11 +24,11 @@ describe('unexpected-resemble', function () {
             function (err) {
                 expect(
                     err.getErrorMessage('text').toString()
-                        .replace(/^(actual|expected): .*\//gm, '$1: /path/to/')
-                        .replace(/^diff: .*\.png/m, 'diff: /tmp/diff.png'),
+                        .replace(new RegExp(quoteRegExpMetaChars(pathModule.resolve(__dirname, '..')), 'g'), '/path/to')
+                        .replace(/^(diff:\s*)\S.*\.png (\(image\/png\))$/m, '$1/tmp/diff.png $2'),
                     'to equal',
-                    "expected '" + peopleJpgPath + "'\n" +
-                    "to resemble '" + people2JpgPath + "', 4\n" +
+                    "expected '/path/to/testdata/People.jpg'\n" +
+                    "to resemble '/path/to/testdata/People2.jpg', 4\n" +
                     "\n" +
                     "{\n" +
                     "  isSameDimensions: true,\n" +
@@ -32,9 +36,9 @@ describe('unexpected-resemble', function () {
                     "  mismatchPercentage: 8.66 // expected 8.66 to be less than 4\n" +
                     "}\n" +
                     "\n" +
-                    "actual: /path/to/People.jpg\n" +
-                    "expected: /path/to/People2.jpg\n" +
-                    "diff: /tmp/diff.png"
+                    "actual:   /path/to/testdata/People.jpg (image/jpeg)\n" +
+                    "expected: /path/to/testdata/People2.jpg (image/jpeg)\n" +
+                    "diff:     /tmp/diff.png (image/png)"
                 );
             }
         );
@@ -52,11 +56,11 @@ describe('unexpected-resemble', function () {
                 function (err) {
                     expect(
                         err.getErrorMessage('text').toString()
-                            .replace(/^(actual|expected): .*\//gm, '$1: /path/to/')
-                            .replace(/^diff: .*\.png/m, 'diff: /tmp/diff.png'),
+                            .replace(new RegExp(quoteRegExpMetaChars(pathModule.resolve(__dirname, '..')), 'g'), '/path/to')
+                            .replace(/^(diff:\s*)\S.*\.png (\(image\/png\))$/m, '$1/tmp/diff.png $2'),
                         'to equal',
-                        "expected '" + peopleJpgPath + "'\n" +
-                        "to resemble '" + people2JpgPath + "', { misMatchPercentage: expect.it('to be less than', 2) }\n" +
+                        "expected '/path/to/testdata/People.jpg'\n" +
+                        "to resemble '/path/to/testdata/People2.jpg', { misMatchPercentage: expect.it('to be less than', 2) }\n" +
                         "\n" +
                         "{\n" +
                         "  isSameDimensions: true,\n" +
@@ -64,9 +68,9 @@ describe('unexpected-resemble', function () {
                         "  mismatchPercentage: 8.66 // expected 8.66 to be less than 2\n" +
                         "}\n" +
                         "\n" +
-                        "actual: /path/to/People.jpg\n" +
-                        "expected: /path/to/People2.jpg\n" +
-                        "diff: /tmp/diff.png"
+                        "actual:   /path/to/testdata/People.jpg (image/jpeg)\n" +
+                        "expected: /path/to/testdata/People2.jpg (image/jpeg)\n" +
+                        "diff:     /tmp/diff.png (image/png)"
                     );
                 }
             );

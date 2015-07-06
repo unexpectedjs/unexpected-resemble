@@ -1,13 +1,13 @@
 var argv = require('minimist')(process.argv.slice(2));
+var proxyquire = require('proxyquire');
 
-require('proxyquire')('gettemporaryfilepath', function () {
-    return 'hey';
-});
 var unexpected = require('unexpected').clone()
-    .installPlugin(require('proxyquire')('./lib/unexpectedResemble', {
-        gettemporaryfilepath: function (options) {
-            return '/tmp/image' + ((options && options.suffix) || '');
-        }
+    .installPlugin(proxyquire('./lib/unexpectedResemble', {
+        'magicpen-media': proxyquire('magicpen-media', {
+            gettemporaryfilepath: function (options) {
+                return '/tmp/image' + ((options && options.suffix) || '');
+            }
+        })
     }));
 var generator = require('unexpected-documentation-site-generator');
 argv.unexpected = unexpected;
