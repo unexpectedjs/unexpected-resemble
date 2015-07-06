@@ -24,7 +24,7 @@ return expect('testdata/People_small.jpg', 'to resemble', 'testdata/People2_smal
 ```
 
 ```output
-expected 'testdata/People_small.jpg' to resemble 'testdata/People2_small.jpg'
+expected testdata/People_small.jpg (image/jpeg) to resemble testdata/People2_small.jpg (image/jpeg)
 
 {
   isSameDimensions: true,
@@ -32,9 +32,7 @@ expected 'testdata/People_small.jpg' to resemble 'testdata/People2_small.jpg'
   mismatchPercentage: 10.08 // expected 10.08 to be less than 1
 }
 
-actual:   testdata/People_small.jpg (image/jpeg)
-expected: testdata/People2_small.jpg (image/jpeg)
-diff:     /tmp/image.png (image/png)
+/tmp/image.png (image/png)
 ```
 
 For more fine-grained control, specify an object with comparison options,

@@ -30,7 +30,7 @@ describe("documentation tests", function () {
             });
         }).caught(function (e) {
             expect(e, "to have message",
-                "expected 'testdata/People.jpg' to resemble 'testdata/People2.jpg'\n" +
+                "expected testdata/People.jpg (image/jpeg) to resemble testdata/People2.jpg (image/jpeg)\n" +
                 "\n" +
                 "{\n" +
                 "  isSameDimensions: true,\n" +
@@ -38,9 +38,7 @@ describe("documentation tests", function () {
                 "  mismatchPercentage: 8.66 // expected 8.66 to be less than 1\n" +
                 "}\n" +
                 "\n" +
-                "actual:   testdata/People.jpg (image/jpeg)\n" +
-                "expected: testdata/People2.jpg (image/jpeg)\n" +
-                "diff:     /tmp/image.png (image/png)"
+                "/tmp/image.png (image/png)"
             );
         }));
 
@@ -61,7 +59,7 @@ describe("documentation tests", function () {
             });
         }).caught(function (e) {
             expect(e, "to have message",
-                "expected 'testdata/People_small.jpg' to resemble 'testdata/People2_small.jpg'\n" +
+                "expected testdata/People_small.jpg (image/jpeg) to resemble testdata/People2_small.jpg (image/jpeg)\n" +
                 "\n" +
                 "{\n" +
                 "  isSameDimensions: true,\n" +
@@ -69,9 +67,7 @@ describe("documentation tests", function () {
                 "  mismatchPercentage: 10.08 // expected 10.08 to be less than 1\n" +
                 "}\n" +
                 "\n" +
-                "actual:   testdata/People_small.jpg (image/jpeg)\n" +
-                "expected: testdata/People2_small.jpg (image/jpeg)\n" +
-                "diff:     /tmp/image.png (image/png)"
+                "/tmp/image.png (image/png)"
             );
         }));
 

@@ -6,6 +6,7 @@
   "dependencies": {
     "gettemporaryfilepath": "0.0.1",
     "image-type": "2.0.2",
+    "magicpen-media": "1.5.0",
     "minimist": "1.1.1",
     "resemble": "1.2.1",
     "resemblejs": "1.2.1",
@@ -13,7 +14,7 @@
   },
   "peerDependencies": {
     "unexpected": "^9.2.0",
-    "magicpen-media": "^1.4.0"
+    "magicpen-media": "^1.5.0"
   },
   "devDependencies": {
     "browserify": "7.0.0",
@@ -21,7 +22,7 @@
     "coveralls": "2.11.2",
     "istanbul": "0.3.13",
     "jshint": "2.6.3",
-    "magicpen-media": "1.4.0",
+    "magicpen-media": "1.5.0",
     "mocha": "2.2.1",
     "proxyquire": "1.5.0",
     "unexpected": "9.2.0",

@@ -25,10 +25,10 @@ describe('unexpected-resemble', function () {
                 expect(
                     err.getErrorMessage('text').toString()
                         .replace(new RegExp(quoteRegExpMetaChars(pathModule.resolve(__dirname, '..')), 'g'), '/path/to')
-                        .replace(/^(diff:\s*)\S.*\.png (\(image\/png\))$/m, '$1/tmp/diff.png $2'),
+                        .replace(/^.*\.png (\(image\/png\))$/m, '/tmp/diff.png $1'),
                     'to equal',
-                    "expected '/path/to/testdata/People.jpg'\n" +
-                    "to resemble '/path/to/testdata/People2.jpg', 4\n" +
+                    "expected /path/to/testdata/People.jpg (image/jpeg)\n" +
+                    "to resemble /path/to/testdata/People2.jpg (image/jpeg), 4\n" +
                     "\n" +
                     "{\n" +
                     "  isSameDimensions: true,\n" +
@@ -36,9 +36,7 @@ describe('unexpected-resemble', function () {
                     "  mismatchPercentage: 8.66 // expected 8.66 to be less than 4\n" +
                     "}\n" +
                     "\n" +
-                    "actual:   /path/to/testdata/People.jpg (image/jpeg)\n" +
-                    "expected: /path/to/testdata/People2.jpg (image/jpeg)\n" +
-                    "diff:     /tmp/diff.png (image/png)"
+                    "/tmp/diff.png (image/png)"
                 );
             }
         );
@@ -57,10 +55,10 @@ describe('unexpected-resemble', function () {
                     expect(
                         err.getErrorMessage('text').toString()
                             .replace(new RegExp(quoteRegExpMetaChars(pathModule.resolve(__dirname, '..')), 'g'), '/path/to')
-                            .replace(/^(diff:\s*)\S.*\.png (\(image\/png\))$/m, '$1/tmp/diff.png $2'),
+                            .replace(/^.*\.png (\(image\/png\))$/m, '/tmp/diff.png $1'),
                         'to equal',
-                        "expected '/path/to/testdata/People.jpg'\n" +
-                        "to resemble '/path/to/testdata/People2.jpg', { misMatchPercentage: expect.it('to be less than', 2) }\n" +
+                        "expected /path/to/testdata/People.jpg (image/jpeg)\n" +
+                        "to resemble /path/to/testdata/People2.jpg (image/jpeg), { misMatchPercentage: expect.it('to be less than', 2) }\n" +
                         "\n" +
                         "{\n" +
                         "  isSameDimensions: true,\n" +
@@ -68,9 +66,7 @@ describe('unexpected-resemble', function () {
                         "  mismatchPercentage: 8.66 // expected 8.66 to be less than 2\n" +
                         "}\n" +
                         "\n" +
-                        "actual:   /path/to/testdata/People.jpg (image/jpeg)\n" +
-                        "expected: /path/to/testdata/People2.jpg (image/jpeg)\n" +
-                        "diff:     /tmp/diff.png (image/png)"
+                        "/tmp/diff.png (image/png)"
                     );
                 }
             );

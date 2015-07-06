@@ -5,7 +5,7 @@ return expect('testdata/People.jpg', 'to resemble', 'testdata/People2.jpg');
 ```
 
 ```output
-expected 'testdata/People.jpg' to resemble 'testdata/People2.jpg'
+expected testdata/People.jpg (image/jpeg) to resemble testdata/People2.jpg (image/jpeg)
 
 {
   isSameDimensions: true,
@@ -13,7 +13,5 @@ expected 'testdata/People.jpg' to resemble 'testdata/People2.jpg'
   mismatchPercentage: 8.66 // expected 8.66 to be less than 1
 }
 
-actual:   testdata/People.jpg (image/jpeg)
-expected: testdata/People2.jpg (image/jpeg)
-diff:     /tmp/image.png (image/png)
+/tmp/image.png (image/png)
 ```
