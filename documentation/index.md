@@ -42,7 +42,7 @@ satisfy](https://unexpectedjs.github.io/assertions/any/to-satisfy/) semantics:
 
 ```javascript#async:true
 return expect('testdata/People_small.jpg', 'to resemble', 'testdata/People2_small.jpg', {
-    misMatchPercentage: expect.it('to be less than', 15),
+    mismatchPercentage: expect.it('to be less than', 15),
     isSameDimensions: true
 });
 ```
