@@ -15,7 +15,7 @@ unexpected-resemble
 [![Coverage Status](https://coveralls.io/repos/unexpectedjs/unexpected-resemble/badge.svg)](https://coveralls.io/r/unexpectedjs/unexpected-resemble)
 [![Dependency Status](https://david-dm.org/unexpectedjs/unexpected-resemble.svg)](https://david-dm.org/unexpectedjs/unexpected-resemble)
 
-Images can be specified either as strings (file name) or as Buffer instances.
+Images can be specified either as strings (file name or data: urls) or as Buffer or Uint8Array instances.
 
 To compare using the default options (images must have the same dimensions and be less than 1% different):
 
