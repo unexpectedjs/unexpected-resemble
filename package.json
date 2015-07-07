@@ -39,7 +39,8 @@
     "coverage": "NODE_ENV=development istanbul cover _mocha -- --reporter dot && echo google-chrome coverage/lcov-report/index.html",
     "prepublish": "browserify -p bundle-collapser/plugin -i canvas -e lib/unexpectedResemble -s unexpectedResemble > unexpectedResemble.min.js",
     "generate-site": "node ./generate-site.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/",
-    "update-examples": "node ./generate-site.js --update-examples && npm run generate-site"
+    "update-examples": "node ./generate-site.js --update-examples && npm run generate-site",
+    "deploy-site": "deploy-site"
   },
   "repository": {
     "type": "git",
