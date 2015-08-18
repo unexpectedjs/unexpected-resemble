@@ -74,7 +74,7 @@ describe("documentation tests", function () {
 
         testPromises.push(expect.promise(function () {
             return expect('testdata/People_small.jpg', 'to resemble', 'testdata/People2_small.jpg', {
-                misMatchPercentage: expect.it('to be less than', 15),
+                mismatchPercentage: expect.it('to be less than', 15),
                 isSameDimensions: true
             });
         }));
