@@ -24,7 +24,8 @@ return expect('testdata/People_small.jpg', 'to resemble', 'testdata/People2_smal
 ```
 
 ```output
-expected testdata/People_small.jpg (image/jpeg) to resemble testdata/People2_small.jpg (image/jpeg)
+expected testdata/People_small.jpg (image/jpeg)
+to resemble testdata/People2_small.jpg (image/jpeg)
 
 {
   isSameDimensions: true,

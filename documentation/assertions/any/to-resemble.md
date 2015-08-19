@@ -5,7 +5,8 @@ return expect('testdata/People.jpg', 'to resemble', 'testdata/People2.jpg');
 ```
 
 ```output
-expected testdata/People.jpg (image/jpeg) to resemble testdata/People2.jpg (image/jpeg)
+expected testdata/People.jpg (image/jpeg)
+to resemble testdata/People2.jpg (image/jpeg)
 
 {
   isSameDimensions: true,

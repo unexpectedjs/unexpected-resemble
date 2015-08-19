@@ -30,7 +30,8 @@ describe("documentation tests", function () {
             });
         }).caught(function (e) {
             expect(e, "to have message",
-                "expected testdata/People.jpg (image/jpeg) to resemble testdata/People2.jpg (image/jpeg)\n" +
+                "expected testdata/People.jpg (image/jpeg)\n" +
+                "to resemble testdata/People2.jpg (image/jpeg)\n" +
                 "\n" +
                 "{\n" +
                 "  isSameDimensions: true,\n" +
@@ -59,7 +60,8 @@ describe("documentation tests", function () {
             });
         }).caught(function (e) {
             expect(e, "to have message",
-                "expected testdata/People_small.jpg (image/jpeg) to resemble testdata/People2_small.jpg (image/jpeg)\n" +
+                "expected testdata/People_small.jpg (image/jpeg)\n" +
+                "to resemble testdata/People2_small.jpg (image/jpeg)\n" +
                 "\n" +
                 "{\n" +
                 "  isSameDimensions: true,\n" +
