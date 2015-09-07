@@ -33,7 +33,7 @@ describe('unexpected-resemble', function () {
                     "{\n" +
                     "  isSameDimensions: true,\n" +
                     "  dimensionDifference: { width: 0, height: 0 },\n" +
-                    "  mismatchPercentage: 8.66 // expected 8.66 to be less than 4\n" +
+                    "  mismatchPercentage: 8.66 // should be less than 4\n" +
                     "}\n" +
                     "\n" +
                     "/tmp/diff.png (image/png)"
@@ -63,7 +63,7 @@ describe('unexpected-resemble', function () {
                         "{\n" +
                         "  isSameDimensions: true,\n" +
                         "  dimensionDifference: { width: 0, height: 0 },\n" +
-                        "  mismatchPercentage: 8.66 // expected 8.66 to be less than 2\n" +
+                        "  mismatchPercentage: 8.66 // should be less than 2\n" +
                         "}\n" +
                         "\n" +
                         "/tmp/diff.png (image/png)"
