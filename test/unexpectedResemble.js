@@ -10,6 +10,8 @@ describe('unexpected-resemble', function () {
     var expect = unexpected.clone()
         .installPlugin(require('../lib/unexpectedResemble'));
 
+    expect.output.preferredWidth = 120;
+
     var peopleJpgPath = pathModule.resolve(__dirname, '..', 'testdata', 'People.jpg'),
         people2JpgPath = pathModule.resolve(__dirname, '..', 'testdata', 'People2.jpg');
 
