@@ -25,7 +25,7 @@
     "mocha": "2.3.0",
     "proxyquire": "1.5.0",
     "unexpected": "10.0.0",
-    "unexpected-documentation-site-generator": "2.9.2"
+    "unexpected-documentation-site-generator": "3.1.0"
   },
   "files": [
     "unexpectedResemble.min.js",
@@ -39,7 +39,7 @@
     "prepublish": "browserify -p bundle-collapser/plugin -i canvas -e lib/unexpectedResemble -s unexpectedResemble > unexpectedResemble.min.js",
     "generate-site": "node ./generate-site.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/",
     "update-examples": "node ./generate-site.js --update-examples && npm run generate-site",
-    "deploy-site": "deploy-site"
+    "deploy-site": "deploy-site.sh"
   },
   "repository": {
     "type": "git",

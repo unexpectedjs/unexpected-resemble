@@ -9,6 +9,7 @@ var unexpected = require('unexpected').clone()
             }
         })
     }));
+unexpected.output.preferredWidth = 80;
 var generator = require('unexpected-documentation-site-generator');
 argv.unexpected = unexpected;
 generator(argv);
