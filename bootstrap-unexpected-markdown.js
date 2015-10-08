@@ -1,7 +1,6 @@
-var argv = require('minimist')(process.argv.slice(2));
+/*global unexpected:true*/
 var proxyquire = require('proxyquire');
-
-var unexpected = require('unexpected').clone()
+unexpected = require('unexpected')
     .installPlugin(proxyquire('./lib/unexpectedResemble', {
         'magicpen-media': proxyquire('magicpen-media', {
             gettemporaryfilepath: function (options) {
@@ -10,6 +9,3 @@ var unexpected = require('unexpected').clone()
         })
     }));
 unexpected.output.preferredWidth = 80;
-var generator = require('unexpected-documentation-site-generator');
-argv.unexpected = unexpected;
-generator(argv);
