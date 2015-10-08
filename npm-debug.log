@@ -1,0 +1,44 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/home/andreas/.nvm/v0.10.40/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'generate-site' ]
+2 info using npm@3.3.6
+3 info using node@v0.10.40
+4 verbose run-script [ 'pregenerate-site', 'generate-site', 'postgenerate-site' ]
+5 info lifecycle unexpected-resemble@3.0.0~pregenerate-site: unexpected-resemble@3.0.0
+6 silly lifecycle unexpected-resemble@3.0.0~pregenerate-site: no script for pregenerate-site, continuing
+7 info lifecycle unexpected-resemble@3.0.0~generate-site: unexpected-resemble@3.0.0
+8 verbose lifecycle unexpected-resemble@3.0.0~generate-site: unsafe-perm in lifecycle true
+9 verbose lifecycle unexpected-resemble@3.0.0~generate-site: PATH: /home/andreas/.nvm/v0.10.40/lib/node_modules/npm/bin/node-gyp-bin:/home/andreas/work/unexpected-resemble/node_modules/.bin:/home/andreas/.nvm/v0.10.40/lib/node_modules/npm/bin/node-gyp-bin:/home/andreas/work/unexpected-resemble/node_modules/.bin:/home/andreas/.nvm/v0.10.40/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+10 verbose lifecycle unexpected-resemble@3.0.0~generate-site: CWD: /home/andreas/work/unexpected-resemble
+11 silly lifecycle unexpected-resemble@3.0.0~generate-site: Args: [ '-c',
+11 silly lifecycle   'generate-site --require ./bootstrap-unexpected-markdown.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/' ]
+12 silly lifecycle unexpected-resemble@3.0.0~generate-site: Returned: code: 8  signal: null
+13 info lifecycle unexpected-resemble@3.0.0~generate-site: Failed to exec generate-site script
+14 verbose stack Error: unexpected-resemble@3.0.0 generate-site: `generate-site --require ./bootstrap-unexpected-markdown.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/`
+14 verbose stack Exit status 8
+14 verbose stack     at EventEmitter.<anonymous> (/home/andreas/.nvm/v0.10.40/lib/node_modules/npm/lib/utils/lifecycle.js:233:16)
+14 verbose stack     at EventEmitter.emit (events.js:98:17)
+14 verbose stack     at ChildProcess.<anonymous> (/home/andreas/.nvm/v0.10.40/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at ChildProcess.emit (events.js:98:17)
+14 verbose stack     at maybeClose (child_process.js:766:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:833:5)
+15 verbose pkgid unexpected-resemble@3.0.0
+16 verbose cwd /home/andreas/work/unexpected-resemble
+17 error Linux 3.19.0-30-generic
+18 error argv "node" "/home/andreas/.nvm/v0.10.40/bin/npm" "run" "generate-site"
+19 error node v0.10.40
+20 error npm  v3.3.6
+21 error code ELIFECYCLE
+22 error unexpected-resemble@3.0.0 generate-site: `generate-site --require ./bootstrap-unexpected-markdown.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/`
+22 error Exit status 8
+23 error Failed at the unexpected-resemble@3.0.0 generate-site script 'generate-site --require ./bootstrap-unexpected-markdown.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/'.
+23 error This is most likely a problem with the unexpected-resemble package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     generate-site --require ./bootstrap-unexpected-markdown.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/
+23 error You can get their info via:
+23 error     npm owner ls unexpected-resemble
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
