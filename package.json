@@ -8,7 +8,7 @@
     "image-type": "2.0.2",
     "magicpen-media": "^1.5.0",
     "minimist": "1.1.1",
-    "resemble": "1.2.1",
+    "resemble": "papandreou/node-resemble#fix/update-canvas",
     "resemblejs": "2.0.1",
     "underscore": "1.8.3"
   },
