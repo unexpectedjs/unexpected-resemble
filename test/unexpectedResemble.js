@@ -1,14 +1,12 @@
-/*global describe, it, __dirname*/
-var unexpected = require('unexpected'),
-    pathModule = require('path');
+/*global describe, it, __dirname, unexpected*/
+var pathModule = require('path');
 
 function quoteRegExpMetaChars(str) {
     return str.replace(/[\.\+\*\{\}\[\]\(\)\?\^\$]/g, '\\$&');
 }
 
 describe('unexpected-resemble', function () {
-    var expect = unexpected.clone()
-        .installPlugin(require('../lib/unexpectedResemble'));
+    var expect = unexpected.clone();
 
     expect.output.preferredWidth = 120;
 
