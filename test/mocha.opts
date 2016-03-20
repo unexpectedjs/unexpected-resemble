@@ -1,3 +1,5 @@
--R spec
+--reporter spec
 --recursive
 --timeout 20000
+--require ./test/common
+--compilers md:unexpected-markdown
