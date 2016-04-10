@@ -20,8 +20,9 @@
     "browserify": "7.0.0",
     "bundle-collapser": "1.1.0",
     "coveralls": "2.11.2",
+    "eslint": "2.7.0",
+    "eslint-config-onelint": "1.0.2",
     "istanbul": "0.3.13",
-    "jshint": "2.6.3",
     "mocha": "2.3.0",
     "proxyquire": "1.5.0",
     "unexpected": "10.10.12",
@@ -33,7 +34,7 @@
     "lib"
   ],
   "scripts": {
-    "lint": "jshint .",
+    "lint": "eslint .",
     "test": "mocha ./documentation/**/*.md ./test/**/*.js && npm run lint",
     "travis": "npm test && npm run coverage && <coverage/lcov.info coveralls",
     "coverage": "NODE_ENV=development istanbul cover _mocha -- --reporter dot && echo google-chrome coverage/lcov-report/index.html",
