@@ -1,7 +1,7 @@
 unexpected-resemble
 ===================
 
-[Resemble.js](http://huddle.github.io/Resemble.js/) plugin for the [Unexpected](https://unexpectedjs.github.io/) assertion library (version 7+ required).
+[Resemble.js](http://huddle.github.io/Resemble.js/) plugin for the [Unexpected](http://unexpected.js,org/) assertion library (version 7+ required).
 
 Mocha 2.3.0+ is required for the image-based diffs to render as images in the browser.
 
@@ -10,7 +10,7 @@ Mocha 2.3.0+ is required for the image-based diffs to render as images in the br
 [![Coverage Status](https://coveralls.io/repos/unexpectedjs/unexpected-resemble/badge.svg)](https://coveralls.io/r/unexpectedjs/unexpected-resemble)
 [![Dependency Status](https://david-dm.org/unexpectedjs/unexpected-resemble.svg)](https://david-dm.org/unexpectedjs/unexpected-resemble)
 
-Read [the documentation](https://unexpected.js.org/unexpected-resemble/).
+Read [the documentation](http://unexpected.js.org/unexpected-resemble/).
 
 License
 -------
