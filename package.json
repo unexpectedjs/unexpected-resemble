@@ -4,11 +4,11 @@
   "description": "Resemble.js plugin for the Unexpected assertion library",
   "main": "lib/unexpectedResemble.js",
   "dependencies": {
+    "@alexjeffburke/resemble": "1.5.0",
     "gettemporaryfilepath": "0.0.1",
     "image-type": "2.1.0",
     "magicpen-media": "^1.5.0",
     "minimist": "1.2.0",
-    "resemble": "1.4.0",
     "resemblejs": "2.2.1",
     "underscore": "1.8.3"
   },
