@@ -30,7 +30,7 @@ to resemble testdata/People2_small.jpg (image/jpeg)
 {
   isSameDimensions: true,
   dimensionDifference: { width: 0, height: 0 },
-  mismatchPercentage: 11.51 // should be less than 1
+  mismatchPercentage: 10.08 // should be less than 1
 }
 
 /tmp/image.png (image/png)
