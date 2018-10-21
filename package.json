@@ -8,8 +8,8 @@
     "image-type": "^3.0.0",
     "magicpen-media": "^1.5.0",
     "minimist": "1.2.0",
-    "resemblejs": "^2.10.3",
-    "underscore": "^1.9.1"
+    "object-assign": "^4.1.1",
+    "resemblejs": "^2.10.3"
   },
   "peerDependencies": {
     "unexpected": "^10.0.0",
@@ -37,7 +37,7 @@
     "test": "mocha ./documentation/**/*.md ./test/**/*.js && npm run lint",
     "travis": "npm test && npm run coverage && <coverage/lcov.info coveralls",
     "coverage": "NODE_ENV=development istanbul cover _mocha -- --reporter dot && echo google-chrome coverage/lcov-report/index.html",
-    "prepublish": "browserify -p bundle-collapser/plugin -i canvas -e lib/unexpectedResemble -s unexpectedResemble > unexpectedResemble.min.js",
+    "prepublish": "browserify -i canvas-prebuilt -e lib/unexpectedResemble -s unexpectedResemble > unexpectedResemble.min.js",
     "generate-site": "generate-site --require ./bootstrap-unexpected-markdown.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/",
     "update-examples": "generate-site --require ./bootstrap-unexpected-markdown.js --update-examples && npm run generate-site",
     "deploy-site": "deploy-site.sh"
