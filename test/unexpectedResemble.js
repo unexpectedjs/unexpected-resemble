@@ -19,7 +19,7 @@ describe('unexpected-resemble', function () {
 
     it('should fail when the comparison is unsuccessful', function () {
         return expect(
-            expect(peopleJpgPath, 'to resemble', people2JpgPath, 4),
+            function () { expect(peopleJpgPath, 'to resemble', people2JpgPath, 4); },
             'to be rejected with',
             function (err) {
                 expect(
@@ -27,16 +27,16 @@ describe('unexpected-resemble', function () {
                         .replace(new RegExp(quoteRegExpMetaChars(pathModule.resolve(__dirname, '..')), 'g'), '/path/to')
                         .replace(/^.*\.png (\(image\/png\))$/m, '/tmp/diff.png $1'),
                     'to equal',
-                    "expected /path/to/testdata/People.jpg (image/jpeg)\n" +
-                    "to resemble /path/to/testdata/People2.jpg (image/jpeg), 4\n" +
-                    "\n" +
-                    "{\n" +
-                    "  isSameDimensions: true,\n" +
-                    "  dimensionDifference: { width: 0, height: 0 },\n" +
-                    "  mismatchPercentage: 8.66 // should be less than 4\n" +
-                    "}\n" +
-                    "\n" +
-                    "/tmp/diff.png (image/png)"
+                    'expected /path/to/testdata/People.jpg (image/jpeg)\n' +
+                    'to resemble /path/to/testdata/People2.jpg (image/jpeg), 4\n' +
+                    '\n' +
+                    '{\n' +
+                    '  isSameDimensions: true,\n' +
+                    '  dimensionDifference: { width: 0, height: 0 },\n' +
+                    '  mismatchPercentage: 8.66 // should be less than 4\n' +
+                    '}\n' +
+                    '\n' +
+                    '/tmp/diff.png (image/png)'
                 );
             }
         );
@@ -49,7 +49,7 @@ describe('unexpected-resemble', function () {
 
         it('should fail when the comparison is unsuccessful', function () {
             return expect(
-                expect(peopleJpgPath, 'to resemble', people2JpgPath, { misMatchPercentage: expect.it('to be less than', 2) }),
+                function () { expect(peopleJpgPath, 'to resemble', people2JpgPath, { misMatchPercentage: expect.it('to be less than', 2) }); },
                 'to be rejected with',
                 function (err) {
                     expect(
@@ -57,16 +57,16 @@ describe('unexpected-resemble', function () {
                             .replace(new RegExp(quoteRegExpMetaChars(pathModule.resolve(__dirname, '..')), 'g'), '/path/to')
                             .replace(/^.*\.png (\(image\/png\))$/m, '/tmp/diff.png $1'),
                         'to equal',
-                        "expected /path/to/testdata/People.jpg (image/jpeg)\n" +
+                        'expected /path/to/testdata/People.jpg (image/jpeg)\n' +
                         "to resemble /path/to/testdata/People2.jpg (image/jpeg), { misMatchPercentage: expect.it('to be less than', 2) }\n" +
-                        "\n" +
-                        "{\n" +
-                        "  isSameDimensions: true,\n" +
-                        "  dimensionDifference: { width: 0, height: 0 },\n" +
-                        "  mismatchPercentage: 8.66 // should be less than 2\n" +
-                        "}\n" +
-                        "\n" +
-                        "/tmp/diff.png (image/png)"
+                        '\n' +
+                        '{\n' +
+                        '  isSameDimensions: true,\n' +
+                        '  dimensionDifference: { width: 0, height: 0 },\n' +
+                        '  mismatchPercentage: 8.66 // should be less than 2\n' +
+                        '}\n' +
+                        '\n' +
+                        '/tmp/diff.png (image/png)'
                     );
                 }
             );
