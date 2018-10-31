@@ -2,7 +2,7 @@
 const pathModule = require('path');
 
 function quoteRegExpMetaChars(str) {
-  return str.replace(/[\.\+\*\{\}\[\]\(\)\?\^\$]/g, '\\$&');
+  return str.replace(/[.+*{}[]()?^$]/g, '\\$&');
 }
 
 describe('unexpected-resemble', () => {
