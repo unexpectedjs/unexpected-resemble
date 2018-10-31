@@ -4,12 +4,12 @@
   "description": "Resemble.js plugin for the Unexpected assertion library",
   "main": "lib/unexpectedResemble.js",
   "dependencies": {
-    "@alexjeffburke/resemble": "1.5.0",
     "gettemporaryfilepath": "1.0.0",
-    "image-type": "3.0.0",
+    "image-type": "^3.0.0",
     "magicpen-media": "^1.5.0",
     "minimist": "1.2.0",
-    "resemblejs": "1.3.0",
+    "object-assign": "^4.1.1",
+    "resemblejs": "^2.10.3",
     "underscore": "1.9.1"
   },
   "peerDependencies": {
@@ -17,15 +17,15 @@
     "magicpen-media": "^1.5.0"
   },
   "devDependencies": {
-    "browserify": "16.2.3",
-    "bundle-collapser": "1.3.0",
-    "coveralls": "3.0.2",
-    "eslint": "2.13.1",
-    "eslint-config-onelint": "1.2.0",
-    "istanbul": "0.4.3",
-    "mocha": "2.5.3",
-    "proxyquire": "1.7.9",
-    "unexpected": "10.13.3",
+    "browserify": "^16.2.3",
+    "bundle-collapser": "^1.3.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.7.0",
+    "eslint-config-onelint": "^4.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "proxyquire": "^2.1.0",
+    "unexpected": "^10.39.1",
     "unexpected-documentation-site-generator": "^4.0.0",
     "unexpected-markdown": "^1.3.4"
   },
@@ -38,7 +38,7 @@
     "test": "mocha ./documentation/**/*.md ./test/**/*.js && npm run lint",
     "travis": "npm test && npm run coverage && <coverage/lcov.info coveralls",
     "coverage": "NODE_ENV=development istanbul cover _mocha -- --reporter dot && echo google-chrome coverage/lcov-report/index.html",
-    "prepublish": "browserify -p bundle-collapser/plugin -i canvas -e lib/unexpectedResemble -s unexpectedResemble > unexpectedResemble.min.js",
+    "prepublish": "browserify -i canvas-prebuilt -e lib/unexpectedResemble -s unexpectedResemble > unexpectedResemble.min.js",
     "generate-site": "generate-site --require ./bootstrap-unexpected-markdown.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/",
     "update-examples": "generate-site --require ./bootstrap-unexpected-markdown.js --update-examples && npm run generate-site",
     "deploy-site": "deploy-site.sh"
