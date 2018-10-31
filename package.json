@@ -38,7 +38,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "mocha ./documentation/**/*.md ./test/**/*.js && npm run lint",
-    "ci": "npm test && npm run coverage && <coverage/lcov.info coveralls",
+    "ci": "npm test && npm run coverage",
     "coverage": "NODE_ENV=development istanbul cover _mocha -- --reporter dot && echo google-chrome coverage/lcov-report/index.html",
     "prepublish": "browserify -i canvas-prebuilt -e lib/unexpectedResemble -s unexpectedResemble > unexpectedResemble.min.js",
     "generate-site": "generate-site --require ./bootstrap-unexpected-markdown.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/",
