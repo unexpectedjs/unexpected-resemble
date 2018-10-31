@@ -2,3 +2,4 @@
 /coverage/
 /unexpectedResemble.min.js
 /site-build/
+/.nyc_output/

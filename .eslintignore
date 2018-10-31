@@ -3,3 +3,4 @@
 /unexpectedResemble.min.js
 /test/documentation.spec.js
 /site-build/
+/.nyc_output/

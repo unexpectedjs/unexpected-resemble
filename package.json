@@ -23,8 +23,8 @@
     "eslint": "^5.8.0",
     "eslint-config-pretty-standard": "^2.0.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
     "prettier": "^1.14.3",
     "proxyquire": "^2.1.0",
     "unexpected": "^10.39.1",
@@ -39,7 +39,7 @@
     "lint": "eslint .",
     "test": "mocha ./documentation/**/*.md ./test/**/*.js && npm run lint",
     "ci": "npm test && npm run coverage",
-    "coverage": "NODE_ENV=development istanbul cover _mocha -- --reporter dot && echo google-chrome coverage/lcov-report/index.html",
+    "coverage": "NODE_ENV=development nyc --reporter=lcov --reporter=text --all -- npm test && echo google-chrome coverage/lcov-report/index.html",
     "prepublish": "browserify -i canvas-prebuilt -e lib/unexpectedResemble -s unexpectedResemble > unexpectedResemble.min.js",
     "generate-site": "generate-site --require ./bootstrap-unexpected-markdown.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/",
     "update-examples": "generate-site --require ./bootstrap-unexpected-markdown.js --update-examples && npm run generate-site",
@@ -63,5 +63,10 @@
   "bugs": {
     "url": "https://github.com/unexpectedjs/unexpected-resemble/issues"
   },
-  "homepage": "https://github.com/unexpectedjs/unexpected-resemble"
+  "homepage": "https://github.com/unexpectedjs/unexpected-resemble",
+  "nyc": {
+    "include": [
+      "lib/**"
+    ]
+  }
 }
