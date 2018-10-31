@@ -1,5 +1,5 @@
-node_modules
-coverage
-unexpectedResemble.min.js
-test/documentation.spec.js
-site-build
+/node_modules/
+/coverage/
+/unexpectedResemble.min.js
+/test/documentation.spec.js
+/site-build/
