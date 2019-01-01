@@ -33,7 +33,7 @@ describe('unexpected-resemble', () => {
         expect(peopleJpgPath, 'to resemble', people2JpgPath, 4);
       },
       'to be rejected with',
-      err => {
+      expect.it(err => {
         expect(
           err
             .getErrorMessage('text')
@@ -58,7 +58,7 @@ describe('unexpected-resemble', () => {
             '\n' +
             '/tmp/diff.png (image/png)'
         );
-      }
+      })
     ));
 
   describe('with mismatchPercentage in odd camel case', () => {
@@ -75,7 +75,7 @@ describe('unexpected-resemble', () => {
           });
         },
         'to be rejected with',
-        err => {
+        expect.it(err => {
           expect(
             err
               .getErrorMessage('text')
@@ -100,7 +100,7 @@ describe('unexpected-resemble', () => {
               '\n' +
               '/tmp/diff.png (image/png)'
           );
-        }
+        })
       ));
   });
 
