@@ -28,7 +28,7 @@
     "prettier": "^1.14.3",
     "proxyquire": "^2.1.0",
     "unexpected": "^11.0.0",
-    "unexpected-documentation-site-generator": "^5.0.0",
+    "unexpected-documentation-site-generator": "^6.0.0",
     "unexpected-markdown": "^2.0.0"
   },
   "files": [
