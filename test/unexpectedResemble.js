@@ -1,4 +1,4 @@
-/*global describe, it, __dirname, unexpected*/
+/*global unexpected*/
 const pathModule = require('path');
 
 function quoteRegExpMetaChars(str) {
