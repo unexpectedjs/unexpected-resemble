@@ -1,6 +1,6 @@
 {
   "name": "unexpected-resemble",
-  "version": "3.4.1",
+  "version": "4.0.0",
   "description": "Resemble.js plugin for the Unexpected assertion library",
   "main": "lib/unexpectedResemble.js",
   "dependencies": {
