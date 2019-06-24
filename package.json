@@ -6,7 +6,7 @@
   "dependencies": {
     "gettemporaryfilepath": "1.0.0",
     "image-type": "^4.0.0",
-    "magicpen-media": "^1.5.0",
+    "magicpen-media": "^2.0.0",
     "minimist": "1.2.0",
     "object-assign": "^4.1.1",
     "resemblejs": "^3.0.0",
