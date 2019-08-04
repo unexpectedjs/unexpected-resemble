@@ -9,7 +9,7 @@
     "magicpen-media": "^2.0.0",
     "minimist": "1.2.0",
     "object-assign": "^4.1.1",
-    "resemblejs": "^3.0.0",
+    "resemblejs-papandreou": "^3.1.0-patch1",
     "underscore": "1.9.1"
   },
   "peerDependencies": {
