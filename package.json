@@ -14,7 +14,7 @@
   },
   "peerDependencies": {
     "unexpected": "^10.0.0 || ^11.0.0",
-    "magicpen-media": "^1.5.0"
+    "magicpen-media": "^2.0.0"
   },
   "devDependencies": {
     "browserify": "^16.2.3",
