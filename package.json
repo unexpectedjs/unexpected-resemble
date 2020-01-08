@@ -5,7 +5,6 @@
   "main": "lib/unexpectedResemble.js",
   "dependencies": {
     "gettemporaryfilepath": "1.0.0",
-    "image-type": "^4.0.0",
     "magicpen-media": "^2.0.0",
     "object-assign": "^4.1.1",
     "resemblejs": "^3.2.0"
