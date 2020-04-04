@@ -37,10 +37,10 @@
     "lib"
   ],
   "scripts": {
-    "lint": "eslint .",
-    "test": "mocha ./documentation/**/*.md ./test/**/*.js && npm run lint",
-    "ci": "npm test && npm run coverage",
-    "coverage": "NODE_ENV=development nyc --reporter=lcov --reporter=text --all -- npm test && echo google-chrome coverage/lcov-report/index.html",
+    "lint": "eslint . && prettier --check '**/*.{js,md}'",
+    "test": "mocha ./documentation/**/*.md ./test/**/*.js",
+    "test:ci": "npm run coverage",
+    "coverage": "nyc --reporter=lcov --reporter=text --all -- npm test && echo google-chrome coverage/lcov-report/index.html",
     "prepublish": "browserify -i canvas-prebuilt -e lib/unexpectedResemble -s unexpectedResemble > unexpectedResemble.min.js",
     "generate-site": "generate-site --require ./bootstrap-unexpected-markdown.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/",
     "update-examples": "generate-site --require ./bootstrap-unexpected-markdown.js --update-examples && npm run generate-site",
