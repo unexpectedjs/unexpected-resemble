@@ -33,7 +33,7 @@ describe('unexpected-resemble', () => {
         expect(peopleJpgPath, 'to resemble', people2JpgPath, 4);
       },
       'to be rejected with',
-      expect.it(err => {
+      expect.it((err) => {
         expect(
           err
             .getErrorMessage('text')
@@ -64,18 +64,18 @@ describe('unexpected-resemble', () => {
   describe('with mismatchPercentage in odd camel case', () => {
     it('should succeed when the comparison is successful', () =>
       expect(peopleJpgPath, 'to resemble', people2JpgPath, {
-        misMatchPercentage: expect.it('to be less than', 10)
+        misMatchPercentage: expect.it('to be less than', 10),
       }));
 
     it('should fail when the comparison is unsuccessful', () =>
       expect(
         () => {
           expect(peopleJpgPath, 'to resemble', people2JpgPath, {
-            misMatchPercentage: expect.it('to be less than', 2)
+            misMatchPercentage: expect.it('to be less than', 2),
           });
         },
         'to be rejected with',
-        expect.it(err => {
+        expect.it((err) => {
           expect(
             err
               .getErrorMessage('text')
@@ -110,7 +110,7 @@ describe('unexpected-resemble', () => {
       'to resemble',
       'data:image/png;base64,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',
       {
-        mismatchPercentage: expect.it('to be less than', 10)
+        mismatchPercentage: expect.it('to be less than', 10),
       }
     ));
 });

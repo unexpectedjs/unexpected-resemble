@@ -5,10 +5,10 @@ unexpected = require('unexpected')
   .installPlugin(
     proxyquire('./lib/unexpectedResemble', {
       'magicpen-media': proxyquire('magicpen-media', {
-        gettemporaryfilepath: function(options) {
+        gettemporaryfilepath: function (options) {
           return `/tmp/image${(options && options.suffix) || ''}`;
-        }
-      })
+        },
+      }),
     })
   );
 unexpected.output.preferredWidth = 80;

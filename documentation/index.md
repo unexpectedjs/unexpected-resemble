@@ -5,8 +5,7 @@ title: unexpected-resemble
 repository: https://github.com/unexpectedjs/unexpected-resemble
 ---
 
-unexpected-resemble
-===================
+# unexpected-resemble
 
 [Resemble.js](http://huddle.github.io/Resemble.js/) plugin for the [Unexpected](https://unexpectedjs.github.io/) assertion library (version 7+ required).
 
@@ -20,7 +19,11 @@ Images can be specified either as strings (file name or data: urls) or as Buffer
 To compare using the default options (images must have the same dimensions and be less than 1% different):
 
 ```javascript#async:true
-return expect('testdata/People_small.jpg', 'to resemble', 'testdata/People2_small.jpg');
+return expect(
+  'testdata/People_small.jpg',
+  'to resemble',
+  'testdata/People2_small.jpg'
+);
 ```
 
 ```output
@@ -40,18 +43,21 @@ For more fine-grained control, specify an object with comparison options,
 which will matched against the result object from resemble.js with [to
 satisfy](https://unexpectedjs.github.io/assertions/any/to-satisfy/) semantics:
 
-
 ```javascript#async:true
-return expect('testdata/People_small.jpg', 'to resemble', 'testdata/People2_small.jpg', {
+return expect(
+  'testdata/People_small.jpg',
+  'to resemble',
+  'testdata/People2_small.jpg',
+  {
     mismatchPercentage: expect.it('to be less than', 15),
-    isSameDimensions: true
-});
+    isSameDimensions: true,
+  }
+);
 ```
 
 See an [overview of all the supported comparison options](https://github.com/Huddle/Resemble.js).
 
-License
--------
+## License
 
 Unexpected-resemble is licensed under a standard 3-clause BSD license -- see
 the `LICENSE` file for details.
