@@ -113,4 +113,10 @@ describe('unexpected-resemble', () => {
         mismatchPercentage: expect.it('to be less than', 10),
       }
     ));
+
+  it('should not break with the ignoreAntialiasing option', () =>
+    expect(peopleJpgPath, 'to resemble', people2JpgPath, {
+      ignoreAntialiasing: true,
+      mismatchPercentage: expect.it('to be less than', 10),
+    }));
 });
