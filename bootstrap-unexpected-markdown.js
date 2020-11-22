@@ -1,5 +1,5 @@
 /* global unexpected:true */
-var proxyquire = require('proxyquire');
+const proxyquire = require('proxyquire');
 unexpected = require('unexpected')
   .clone()
   .installPlugin(
