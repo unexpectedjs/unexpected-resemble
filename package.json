@@ -15,7 +15,6 @@
   "devDependencies": {
     "browserify": "^17.0.0",
     "bundle-collapser": "^1.3.0",
-    "coveralls": "^3.0.2",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-config-standard": "^16.0.2",
@@ -39,7 +38,6 @@
   "scripts": {
     "lint": "eslint . && prettier --check '**/*.{js,json,md}'",
     "test": "mocha ./documentation/**/*.md ./test/**/*.js",
-    "test:ci": "npm run coverage",
     "coverage": "nyc --reporter=lcov --reporter=text --all -- npm test && echo google-chrome coverage/lcov-report/index.html",
     "prepublish": "browserify -i canvas-prebuilt -e lib/unexpectedResemble -s unexpectedResemble > unexpectedResemble.min.js",
     "generate-site": "generate-site --require ./bootstrap-unexpected-markdown.js && cp -R testdata site-build/assertions/any/to-resemble/ && cp -R testdata site-build/",

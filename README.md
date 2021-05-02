@@ -5,7 +5,7 @@
 Mocha 2.3.0+ is required for the image-based diffs to render as images in the browser.
 
 [![NPM version](https://badge.fury.io/js/unexpected-resemble.svg)](http://badge.fury.io/js/unexpected-resemble)
-[![Build Status](https://travis-ci.org/unexpectedjs/unexpected-resemble.svg?branch=master)](https://travis-ci.org/unexpectedjs/unexpected-resemble)
+[![Build Status](https://github.com/unexpectedjs/unexpected-resemble/workflows/Tests/badge.svg)](https://github.com/unexpectedjs/unexpected-resemble)
 [![Coverage Status](https://coveralls.io/repos/unexpectedjs/unexpected-resemble/badge.svg)](https://coveralls.io/r/unexpectedjs/unexpected-resemble)
 [![Dependency Status](https://david-dm.org/unexpectedjs/unexpected-resemble.svg)](https://david-dm.org/unexpectedjs/unexpected-resemble)
 
