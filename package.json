@@ -4,7 +4,7 @@
   "description": "Resemble.js plugin for the Unexpected assertion library",
   "main": "lib/unexpectedResemble.js",
   "dependencies": {
-    "eslint-plugin-n": "^15.1.0",
+    "eslint-plugin-n": "^16.6.0",
     "gettemporaryfilepath": "1.0.1",
     "magicpen-media": "^3.0.0",
     "object-assign": "^4.1.1",
